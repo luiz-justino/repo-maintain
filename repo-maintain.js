@@ -18,7 +18,6 @@ async function repoMaintain() {
     console.log = function () {}
   }
 
-  // Create cache directory if it doesn't exist
   if (!Fs.existsSync(CACHE_DIR)) {
     Fs.mkdirSync(CACHE_DIR)
   }
@@ -35,6 +34,18 @@ async function repoMaintain() {
     searchResults = await search(githubToken)
     Fs.writeFileSync(SEARCH_CACHE, JSON.stringify(searchResults))
     console.log('Search results saved to cache.\n')
+  }
+
+  // Inject fork overrides for preview (feature/fork-preview branch only)
+  const FORK_OVERRIDES_FILE = 'fork-overrides.json'
+  if (Fs.existsSync(FORK_OVERRIDES_FILE)) {
+    const overrides = JSON.parse(Fs.readFileSync(FORK_OVERRIDES_FILE, 'utf8'))
+    const existingNames = new Set(searchResults.map(r => r.full_name))
+    const newForks = overrides.filter(r => !existingNames.has(r.full_name))
+    if (newForks.length > 0) {
+      console.log(`Injecting ${newForks.length} fork overrides from ${FORK_OVERRIDES_FILE}...\n`)
+      searchResults = [...searchResults, ...newForks]
+    }
   }
 
   let Plugins = await filter(searchResults)

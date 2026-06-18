@@ -1,0 +1,20 @@
+[
+  { "full_name": "luiz-justino/seneca-user", "html_url": "https://github.com/luiz-justino/seneca-user", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-auth", "html_url": "https://github.com/luiz-justino/seneca-auth", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-postgres-store", "html_url": "https://github.com/luiz-justino/seneca-postgres-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-mysql-store", "html_url": "https://github.com/luiz-justino/seneca-mysql-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-mongo-store", "html_url": "https://github.com/luiz-justino/seneca-mongo-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-redis-store", "html_url": "https://github.com/luiz-justino/seneca-redis-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-entity-cache", "html_url": "https://github.com/luiz-justino/seneca-entity-cache", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-sqlite-store", "html_url": "https://github.com/luiz-justino/seneca-sqlite-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-level-store", "html_url": "https://github.com/luiz-justino/seneca-level-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-jsonfile-store", "html_url": "https://github.com/luiz-justino/seneca-jsonfile-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-mem-store", "html_url": "https://github.com/luiz-justino/seneca-mem-store", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-transport", "html_url": "https://github.com/luiz-justino/seneca-transport", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-web", "html_url": "https://github.com/luiz-justino/seneca-web", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-entity", "html_url": "https://github.com/luiz-justino/seneca-entity", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-balance-client", "html_url": "https://github.com/luiz-justino/seneca-balance-client", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-redis-pubsub-transport", "html_url": "https://github.com/luiz-justino/seneca-redis-pubsub-transport", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-redis-queue-transport", "html_url": "https://github.com/luiz-justino/seneca-redis-queue-transport", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 },
+  { "full_name": "luiz-justino/seneca-pino-logger", "html_url": "https://github.com/luiz-justino/seneca-pino-logger", "language": "JavaScript", "default_branch": "main", "forks_count": 0, "stargazers_count": 0, "open_issues": 0 }
+]
