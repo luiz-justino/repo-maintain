@@ -26,10 +26,19 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check cache
+        run: |
+          if [ -f ".cache/search-results.json" ]; then
+            echo "Cache found, will use it."
+          else
+            echo "No cache found, will run full search."
+          fi
+
       - name: Generate report
         run: node repo-maintain.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USE_CACHE: ${{ hashFiles('.cache/search-results.json') != '' && 'true' || 'false' }}
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
@@ -43,16 +52,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add REPORT.md REPORT.csv index.html
+          git add REPORT.md REPORT.csv index.html .cache/
           git diff --staged --quiet || git commit -m "chore: update Seneca report [skip ci]"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload to GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
