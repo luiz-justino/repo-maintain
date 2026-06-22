@@ -2,8 +2,8 @@ name: Generate Seneca Report
 
 on:
   schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 9:00 AM UTC
-  workflow_dispatch:      # Allow manual trigger from GitHub UI
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -59,3 +59,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload to GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
