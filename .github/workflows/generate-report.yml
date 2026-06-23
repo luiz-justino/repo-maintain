@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: feature/fork-preview
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,19 +28,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check cache
-        run: |
-          if [ -f ".cache/search-results.json" ]; then
-            echo "Cache found, will use it."
-          else
-            echo "No cache found, will run full search."
-          fi
-
       - name: Generate report
         run: node repo-maintain.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USE_CACHE: ${{ hashFiles('.cache/search-results.json') != '' && 'true' || 'false' }}
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
@@ -52,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add REPORT.md REPORT.csv index.html .cache/
+          git add REPORT.md REPORT.csv index.html
           git diff --staged --quiet || git commit -m "chore: update Seneca report [skip ci]"
           git push origin HEAD:feature/fork-preview
         env:
