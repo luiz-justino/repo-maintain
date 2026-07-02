@@ -610,5 +610,95 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-gateway-express-auth",
+    "html_url": "https://github.com/luiz-justino/seneca-gateway-express-auth",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-gateway-lambda",
+    "html_url": "https://github.com/luiz-justino/seneca-gateway-lambda",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-allow",
+    "html_url": "https://github.com/luiz-justino/seneca-allow",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-maintain",
+    "html_url": "https://github.com/luiz-justino/seneca-maintain",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-eventbrite-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-eventbrite-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-github-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-github-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-gcal-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-gcal-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-salesforce-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-salesforce-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-gitlab-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-gitlab-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
