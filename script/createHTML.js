@@ -47,14 +47,15 @@ module.exports = {
           <td><a href="${plugin.data.html_url}" target="_blank">${plugin.data.full_name}</a><span class="badge badge-${owner}">${badgeLabel}</span></td>
           <td>${plugin.data.language || 'N/A'}</td>
           <td>⭐ ${plugin.data.stargazers_count}</td>
+          <td>${plugin.data.open_prs > 0 ? '<a href="https://github.com/senecajs/' + plugin.data.full_name.split('/')[1] + '/pulls" target="_blank">🔗 ' + plugin.data.open_prs + '</a>' : '—'}</td>
           <td>${plugin.data.default_branch}</td>
           ${checkCells}
         </tr>`
     }).join('')
 
     const checkNames = plugins[0] ? Object.keys(plugins[0].checks) : []
-    const checkHeaders = checkNames.map((name, i) =>
-      `<th class="sortable" data-col="${4 + i}" title="${name}">${name.replace(/_/g, ' ')} <span class="sort-icon">↕</span></th>`
+    const checkHeaders = checkNames.map(name =>
+      `<th title="${name}">${name.replace(/_/g, ' ')}</th>`
     ).join('')
 
     const generated = new Date().toUTCString()
@@ -105,12 +106,6 @@ module.exports = {
     .badge-fork { background: #1a3326; color: #56d364; }
     .badge-community { background: #2d2033; color: #d2a8ff; }
     .hidden { display: none; }
-    th.sortable { cursor: pointer; user-select: none; }
-    th.sortable:hover { color: #c9d1d9; }
-    th.sort-asc .sort-icon::after { content: '↑'; }
-    th.sort-desc .sort-icon::after { content: '↓'; }
-    th.sort-asc .sort-icon, th.sort-desc .sort-icon { color: #58a6ff; }
-    .sort-icon { font-size: 10px; margin-left: 4px; color: #444d56; }
   </style>
 </head>
 <body>
@@ -148,10 +143,10 @@ module.exports = {
     <table id="reportTable">
       <thead>
         <tr>
-          <th class="sortable" data-col="0">Plugin <span class="sort-icon">↕</span></th>
-          <th class="sortable" data-col="1">Language <span class="sort-icon">↕</span></th>
-          <th class="sortable" data-col="2">Stars <span class="sort-icon">↕</span></th>
-          <th class="sortable" data-col="3">Branch <span class="sort-icon">↕</span></th>
+          <th>Plugin</th>
+          <th>Language</th>
+          <th>Stars</th>
+          <th>Branch</th>
           ${checkHeaders}
         </tr>
       </thead>
@@ -170,52 +165,6 @@ module.exports = {
       el.classList.add('active')
       filterTable()
     }
-
-    let sortCol = -1
-    let sortDir = 1
-
-    function sortTable(col) {
-      if (sortCol === col) {
-        sortDir *= -1
-      } else {
-        sortCol = col
-        sortDir = 1
-      }
-      document.querySelectorAll('th.sortable').forEach(th => {
-        th.classList.remove('sort-asc', 'sort-desc')
-        th.querySelector('.sort-icon').textContent = '↕'
-      })
-      const activeTh = document.querySelector(\`th.sortable[data-col="\${col}"]\`)
-      if (activeTh) {
-        activeTh.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc')
-        activeTh.querySelector('.sort-icon').textContent = sortDir === 1 ? '↑' : '↓'
-      }
-      const tbody = document.querySelector('#reportTable tbody')
-      const rows = Array.from(tbody.querySelectorAll('tr'))
-      rows.sort((a, b) => {
-        const aCell = a.querySelectorAll('td')[col]
-        const bCell = b.querySelectorAll('td')[col]
-        if (!aCell || !bCell) return 0
-        let aVal = aCell.textContent.trim()
-        let bVal = bCell.textContent.trim()
-        // Stars: extrair número
-        if (col === 2) {
-          aVal = parseInt(aVal.replace(/[^0-9]/g, '')) || 0
-          bVal = parseInt(bVal.replace(/[^0-9]/g, '')) || 0
-          return (aVal - bVal) * sortDir
-        }
-        // Checks: ✅ > ❌
-        if (aVal === '✅' || aVal === '❌') {
-          return (aVal === bVal ? 0 : aVal === '✅' ? -1 : 1) * sortDir
-        }
-        return aVal.localeCompare(bVal) * sortDir
-      })
-      rows.forEach(r => tbody.appendChild(r))
-    }
-
-    document.querySelectorAll('th.sortable').forEach(th => {
-      th.addEventListener('click', () => sortTable(parseInt(th.dataset.col)))
-    })
 
     function filterTable() {
       const search = document.getElementById('search').value.toLowerCase()
