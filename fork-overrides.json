@@ -799,5 +799,23 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-telemetry-datadog",
+    "html_url": "https://github.com/luiz-justino/seneca-telemetry-datadog",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-hubspot-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-hubspot-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
