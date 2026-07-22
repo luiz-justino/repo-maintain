@@ -88,6 +88,13 @@ module.exports = {
     })
 
 
+    // Only fetch PR status for official senecajs/* plugins
+    if (!apiData.full_name.startsWith('senecajs/')) {
+      reqData.open_prs = 0
+      reqData.fork_status = 'not_started'
+      reqData.fork_pr_url = null
+      reqData.fork_pr_number = null
+    } else {
     // Fetch PR status from official senecajs repo
     try {
       const repoName = apiData.full_name.split('/')[1]
