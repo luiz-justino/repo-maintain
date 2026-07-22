@@ -88,7 +88,7 @@ module.exports = {
     })
 
 
-    // Only fetch PR status for official senecajs/* plugins
+    // Only fetch PR status for official senecajs/* plugins (perf: skip community/forks)
     if (!apiData.full_name.startsWith('senecajs/')) {
       reqData.open_prs = 0
       reqData.fork_status = 'not_started'
