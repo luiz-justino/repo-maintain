@@ -35,8 +35,9 @@
     .table-scroll::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
     .table-scroll::-webkit-scrollbar-thumb:hover { background: #58a6ff; }
     .table-scroll::-webkit-scrollbar-corner { background: #161b22; }
-    .table-scroll { overflow-x: auto; overflow-y: auto; max-height: calc(100vh - 280px); border: 1px solid #30363d; border-radius: 6px; }
-    .table-scroll table tr td:last-child, .table-scroll table tr th:last-child { padding-right: 24px; }
+    .table-scroll { overflow-x: auto; overflow-y: scroll; max-height: calc(100vh - 280px); border: 1px solid #30363d; border-radius: 6px; scrollbar-gutter: stable; }
+    .table-scroll table { margin-right: 0; }
+    .table-scroll table tr td:last-child, .table-scroll table tr th:last-child { padding-right: 20px; }
     table { min-width: max-content; width: 100%; border-collapse: collapse; font-size: 13px; }
     td, th { white-space: nowrap; padding: 8px 12px; }
     thead tr th { position: sticky; top: 0; z-index: 10; background: #161b22; }
@@ -66,23 +67,23 @@
 <body>
   <header>
     <h1>🔍 Seneca Plugin Report</h1>
-    <p>Generated on Wed, 22 Jul 2026 11:30:42 GMT · 2878 plugins analyzed</p>
+    <p>Generated on Wed, 22 Jul 2026 11:37:38 GMT · 2879 plugins analyzed</p>
   </header>
 
   <div class="stats">
-    <div class="stat total"><div class="number">2878</div><div class="label">Total Plugins</div></div>
+    <div class="stat total"><div class="number">2879</div><div class="label">Total Plugins</div></div>
     <div class="stat pass"><div class="number">115</div><div class="label">Passing</div></div>
-    <div class="stat fail"><div class="number">2763</div><div class="label">Failing</div></div>
+    <div class="stat fail"><div class="number">2764</div><div class="label">Failing</div></div>
     <div class="stat official"><div class="number">18/166</div><div class="label">Official passing</div></div>
     <div class="stat fork"><div class="number">97/97</div><div class="label">Forks passing</div></div>
-    <div class="stat community"><div class="number">0/2615</div><div class="label">Community passing</div></div>
+    <div class="stat community"><div class="number">0/2616</div><div class="label">Community passing</div></div>
   </div>
 
   <div class="tab-bar">
-    <div class="tab active" onclick="setTab('all', this)">All <span class="count">2878</span></div>
+    <div class="tab active" onclick="setTab('all', this)">All <span class="count">2879</span></div>
     <div class="tab" onclick="setTab('official', this)">Official (senecajs/*) <span class="count">166</span></div>
     <div class="tab" onclick="setTab('fork', this)">Forks in review (luiz-justino/*) <span class="count">97</span></div>
-    <div class="tab" onclick="setTab('community', this)">Community <span class="count">2615</span></div>
+    <div class="tab" onclick="setTab('community', this)">Community <span class="count">2616</span></div>
   </div>
 
   <div class="legend">
@@ -4824,15 +4825,6 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/rafinskipg/microservices-scaffolding" target="_blank">rafinskipg/microservices-scaffolding</a><span class="badge badge-community">community</span></td>
-          <td>JavaScript</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>master</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/telemark-arkiv/tfk-seneca-mesh-counter" target="_blank">telemark-arkiv/tfk-seneca-mesh-counter</a><span class="badge badge-community">community</span></td>
           <td>JavaScript</td>
           <td>⭐ 0</td>
@@ -4840,6 +4832,15 @@
           <td>—</td>
           <td>master</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/rafinskipg/microservices-scaffolding" target="_blank">rafinskipg/microservices-scaffolding</a><span class="badge badge-community">community</span></td>
+          <td>JavaScript</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>master</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/zrrrzzt/seneca-counter-firebase" target="_blank">zrrrzzt/seneca-counter-firebase</a><span class="badge badge-community">community</span></td>
@@ -6462,15 +6463,6 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/FernandoCagale/seneca-service-order" target="_blank">FernandoCagale/seneca-service-order</a><span class="badge badge-community">community</span></td>
-          <td>JavaScript</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>master</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/DaveWM/seneca-test" target="_blank">DaveWM/seneca-test</a><span class="badge badge-community">community</span></td>
           <td>JavaScript</td>
           <td>⭐ 0</td>
@@ -6478,6 +6470,15 @@
           <td>—</td>
           <td>master</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/FernandoCagale/seneca-service-order" target="_blank">FernandoCagale/seneca-service-order</a><span class="badge badge-community">community</span></td>
+          <td>JavaScript</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>master</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/lgybetter/seneca-test" target="_blank">lgybetter/seneca-test</a><span class="badge badge-community">community</span></td>
@@ -6516,6 +6517,15 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/elsa-ng/seneca-oop345" target="_blank">elsa-ng/seneca-oop345</a><span class="badge badge-community">community</span></td>
+          <td>C++</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>master</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/shivanimodi04/seneca-projects" target="_blank">shivanimodi04/seneca-projects</a><span class="badge badge-community">community</span></td>
           <td>N/A</td>
           <td>⭐ 0</td>
@@ -6541,15 +6551,6 @@
           <td>—</td>
           <td>master</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/elsa-ng/seneca-oop345" target="_blank">elsa-ng/seneca-oop345</a><span class="badge badge-community">community</span></td>
-          <td>C++</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>master</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/LeonardoJPerez/seneca-heartbeat" target="_blank">LeonardoJPerez/seneca-heartbeat</a><span class="badge badge-community">community</span></td>
@@ -8226,6 +8227,15 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/sue-chun/OOP244" target="_blank">sue-chun/OOP244</a><span class="badge badge-community">community</span></td>
+          <td>C++</td>
+          <td>⭐ 1</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>master</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/FelipeBarrosCruz/seneca-sequelize" target="_blank">FelipeBarrosCruz/seneca-sequelize</a><span class="badge badge-community">community</span></td>
           <td>N/A</td>
           <td>⭐ 0</td>
@@ -8242,15 +8252,6 @@
           <td>—</td>
           <td>master</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/sue-chun/OOP244" target="_blank">sue-chun/OOP244</a><span class="badge badge-community">community</span></td>
-          <td>C++</td>
-          <td>⭐ 1</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>master</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/acastrog18/gitwsrepo1" target="_blank">acastrog18/gitwsrepo1</a><span class="badge badge-community">community</span></td>
@@ -9747,8 +9748,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/mehuldesai94/WEB-322" target="_blank">mehuldesai94/WEB-322</a><span class="badge badge-community">community</span></td>
-          <td>Handlebars</td>
+          <td><a href="https://github.com/mehuldesai94/OOP345" target="_blank">mehuldesai94/OOP345</a><span class="badge badge-community">community</span></td>
+          <td>C++</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -9756,8 +9757,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/mehuldesai94/OOP345" target="_blank">mehuldesai94/OOP345</a><span class="badge badge-community">community</span></td>
-          <td>C++</td>
+          <td><a href="https://github.com/mehuldesai94/WEB-322" target="_blank">mehuldesai94/WEB-322</a><span class="badge badge-community">community</span></td>
+          <td>Handlebars</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -13833,6 +13834,15 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/sdthaker/SenecaCollege-BTN415" target="_blank">sdthaker/SenecaCollege-BTN415</a><span class="badge badge-community">community</span></td>
+          <td>C++</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>master</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/pitt-healthsciences/SENECA" target="_blank">pitt-healthsciences/SENECA</a><span class="badge badge-community">community</span></td>
           <td>R</td>
           <td>⭐ 0</td>
@@ -13849,15 +13859,6 @@
           <td>—</td>
           <td>main</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/sdthaker/SenecaCollege-BTN415" target="_blank">sdthaker/SenecaCollege-BTN415</a><span class="badge badge-community">community</span></td>
-          <td>C++</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>master</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/sdthaker/SenecaCollege-BTP400" target="_blank">sdthaker/SenecaCollege-BTP400</a><span class="badge badge-community">community</span></td>
@@ -17298,15 +17299,6 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/OGarland001/SenecaSmartCitiesHackathon2023" target="_blank">OGarland001/SenecaSmartCitiesHackathon2023</a><span class="badge badge-community">community</span></td>
-          <td>HTML</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>main</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/Qwerty-pixl/Seneca" target="_blank">Qwerty-pixl/Seneca</a><span class="badge badge-community">community</span></td>
           <td>HTML</td>
           <td>⭐ 0</td>
@@ -17323,6 +17315,15 @@
           <td>—</td>
           <td>main</td>
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/OGarland001/SenecaSmartCitiesHackathon2023" target="_blank">OGarland001/SenecaSmartCitiesHackathon2023</a><span class="badge badge-community">community</span></td>
+          <td>HTML</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>main</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/jding40/SenecaChurchEventManagementSystem" target="_blank">jding40/SenecaChurchEventManagementSystem</a><span class="badge badge-community">community</span></td>
@@ -18909,8 +18910,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/aomar47/Seneca-OPS445ZAA-2024Fall-lab4-template-aomar47" target="_blank">aomar47/Seneca-OPS445ZAA-2024Fall-lab4-template-aomar47</a><span class="badge badge-community">community</span></td>
-          <td>Python</td>
+          <td><a href="https://github.com/asondhi143/Bus-Parking-Sensors" target="_blank">asondhi143/Bus-Parking-Sensors</a><span class="badge badge-community">community</span></td>
+          <td>HTML</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -18918,8 +18919,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/asondhi143/Bus-Parking-Sensors" target="_blank">asondhi143/Bus-Parking-Sensors</a><span class="badge badge-community">community</span></td>
-          <td>HTML</td>
+          <td><a href="https://github.com/aomar47/Seneca-OPS445ZAA-2024Fall-lab4-template-aomar47" target="_blank">aomar47/Seneca-OPS445ZAA-2024Fall-lab4-template-aomar47</a><span class="badge badge-community">community</span></td>
+          <td>Python</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -21654,8 +21655,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-4-lab4-template-7e850b" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-4-lab4-template-7e850b</a><span class="badge badge-community">community</span></td>
-          <td>Python</td>
+          <td><a href="https://github.com/mukhitonc/Seneca-Engineering-Competition-2025" target="_blank">mukhitonc/Seneca-Engineering-Competition-2025</a><span class="badge badge-community">community</span></td>
+          <td>N/A</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -21663,8 +21664,8 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/mukhitonc/Seneca-Engineering-Competition-2025" target="_blank">mukhitonc/Seneca-Engineering-Competition-2025</a><span class="badge badge-community">community</span></td>
-          <td>N/A</td>
+          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-4-lab4-template-7e850b" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-4-lab4-template-7e850b</a><span class="badge badge-community">community</span></td>
+          <td>Python</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
           <td>—</td>
@@ -21933,24 +21934,6 @@
           <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-8-lab8-template-cc8ce6" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-8-lab8-template-cc8ce6</a><span class="badge badge-community">community</span></td>
-          <td>N/A</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>main</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
-          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-1-lab1-template-e99a19" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-1-lab1-template-e99a19</a><span class="badge badge-community">community</span></td>
-          <td>Python</td>
-          <td>⭐ 0</td>
-          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
-          <td>—</td>
-          <td>main</td>
-          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
-        </tr>
-        <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-5-lab5-template-78f7be" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-5-lab5-template-78f7be</a><span class="badge badge-community">community</span></td>
           <td>Python</td>
           <td>⭐ 0</td>
@@ -21961,6 +21944,24 @@
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-5-lab5-template-6e5cca" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-5-lab5-template-6e5cca</a><span class="badge badge-community">community</span></td>
+          <td>Python</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>main</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-8-lab8-template-cc8ce6" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-8-lab8-template-cc8ce6</a><span class="badge badge-community">community</span></td>
+          <td>N/A</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>main</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-1-lab1-template-e99a19" target="_blank">OPS445-Students-Summer2025/senecaops445-w25-ndd-lab-1-lab1-template-e99a19</a><span class="badge badge-community">community</span></td>
           <td>Python</td>
           <td>⭐ 0</td>
           <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
@@ -23182,6 +23183,15 @@
           <td>1</td>
           <td>main</td>
           <td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td><td class="pass">✅</td><td class="pass">✅</td><td class="fail">❌</td>
+        </tr>
+        <tr class="row-fail" data-owner="community">
+          <td><a href="https://github.com/aman0303/senecacostseg" target="_blank">aman0303/senecacostseg</a><span class="badge badge-community">community</span></td>
+          <td>HTML</td>
+          <td>⭐ 0</td>
+          <td><div class="fork-status">➖<span class="tip">Not started yet</span></div></td>
+          <td>—</td>
+          <td>main</td>
+          <td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td><td class="fail">❌</td><td class="pass">✅</td><td class="fail">❌</td>
         </tr>
         <tr class="row-fail" data-owner="community">
           <td><a href="https://github.com/southeastseneca/Senecalakekayak" target="_blank">southeastseneca/Senecalakekayak</a><span class="badge badge-community">community</span></td>
