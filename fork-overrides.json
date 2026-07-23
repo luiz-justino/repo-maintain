@@ -907,5 +907,23 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-checklyhq-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-checklyhq-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-knex-store",
+    "html_url": "https://github.com/luiz-justino/seneca-knex-store",
+    "language": "JavaScript",
+    "default_branch": "master",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
