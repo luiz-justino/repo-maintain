@@ -925,5 +925,23 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-apimatic-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-apimatic-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-zoom-provider",
+    "html_url": "https://github.com/luiz-justino/seneca-zoom-provider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
