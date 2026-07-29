@@ -88,6 +88,8 @@ module.exports = {
     })
 
 
+    // Only fetch PR status for official senecajs/* plugins
+    if (apiData.full_name.startsWith('senecajs/')) {
     // Fetch PR status from official senecajs repo
     try {
       const repoName = apiData.full_name.split('/')[1]
@@ -138,6 +140,7 @@ module.exports = {
       reqData.fork_pr_url = null
       reqData.fork_pr_number = null
     }
+    } // end if senecajs
 
     return {
       data: reqData,
