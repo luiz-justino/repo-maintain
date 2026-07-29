@@ -58,7 +58,7 @@ module.exports = {
       const badgeLabel = owner === 'official' ? 'official' : owner === 'fork' ? 'fork' : 'community'
 
       return `
-        <tr class="${allPass ? 'row-pass' : 'row-fail'}" data-owner="${owner}">
+        <tr class="${allPass ? 'row-pass' : 'row-fail'}" data-owner="${owner}" data-fork-status="${plugin.data.fork_status || ''}">
           <td><a href="${plugin.data.html_url}" target="_blank">${plugin.data.full_name}</a><span class="badge badge-${owner}">${badgeLabel}</span></td>
           <td>${plugin.data.language || 'N/A'}</td>
           <td>⭐ ${plugin.data.stargazers_count}</td>
