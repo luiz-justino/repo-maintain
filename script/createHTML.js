@@ -77,7 +77,7 @@ module.exports = {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seneca Plugin Report</title>
+  <title>Seneca Repo Maintain Report</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; }
@@ -140,23 +140,28 @@ module.exports = {
 </head>
 <body>
   <header>
-    <h1>🔍 Seneca Plugin Report</h1>
-    <p>Generated on ${generated} · ${total} plugins analyzed</p>
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <h1>🔍 Seneca Repo Maintain Report</h1>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="https://www.voxgig.com/res/img/vgt01r.png" alt="Voxgig" style="height:32px; object-fit:contain;">
+        <img src="http://senecajs.org/files/assets/seneca-logo.png" alt="Seneca" style="height:32px; object-fit:contain;">
+      </div>
+    </div>
+    <p>Generated on ${generated} · ${officialTotal} official plugins analyzed</p>
   </header>
 
   <div class="stats">
-    <div class="stat total"><div class="number">${total}</div><div class="label">Total Plugins</div></div>
-    <div class="stat pass"><div class="number">${passed}</div><div class="label">Passing</div></div>
-    <div class="stat fail"><div class="number">${failed}</div><div class="label">Failing</div></div>
+    <div class="stat total"><div class="number">${officialTotal}</div><div class="label">Total Plugins</div></div>
+    <div class="stat pass"><div class="number">${officialPassed}</div><div class="label">Passing</div></div>
+    <div class="stat fail"><div class="number">${officialTotal - officialPassed}</div><div class="label">Failing</div></div>
     <div class="stat official"><div class="number">${officialPassed}/${officialTotal}</div><div class="label">Official passing</div></div>
-    <div class="stat fork"><div class="number">${forkPassed}/${forkTotal}</div><div class="label">Forks passing</div></div>
+    <div class="stat fork"><div class="number">${awaitingReview}</div><div class="label">Awaiting Review</div></div>
     <div class="stat community"><div class="number">${communityPassed}/${communityTotal}</div><div class="label">Community passing</div></div>
   </div>
 
   <div class="tab-bar">
-    <div class="tab active" onclick="setTab('all', this)">All <span class="count">${total}</span></div>
-    <div class="tab" onclick="setTab('official', this)">Official (senecajs/*) <span class="count">${officialTotal}</span></div>
-    <div class="tab" onclick="setTab('fork', this)">Forks in review (luiz-justino/*) <span class="count">${forkTotal}</span></div>
+    <div class="tab active" onclick="setTab('all', this)">All <span class="count">${officialTotal}</span></div>
+    <div class="tab" onclick="setTab('fork', this)">Awaiting Review <span class="count">${awaitingReview}</span></div>
     <div class="tab" onclick="setTab('community', this)">Community <span class="count">${communityTotal}</span></div>
   </div>
 
@@ -170,8 +175,7 @@ module.exports = {
     <input type="search" id="search" placeholder="Search plugins..." oninput="filterTable()">
     <select id="statusFilter" onchange="filterTable()">
       <option value="all">All</option>
-      <option value="pass">Passing only</option>
-      <option value="fail">Failing only</option>
+      <option value="fork">Awaiting Review</option>
     </select>
   </div>
 
