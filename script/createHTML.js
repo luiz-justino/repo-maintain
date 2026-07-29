@@ -180,6 +180,8 @@ module.exports = {
     <input type="search" id="search" placeholder="Search plugins..." oninput="filterTable()">
     <select id="statusFilter" onchange="filterTable()">
       <option value="all">All</option>
+      <option value="pass">Passing</option>
+      <option value="fail">Failing</option>
       <option value="fork">Awaiting Review</option>
     </select>
   </div>
