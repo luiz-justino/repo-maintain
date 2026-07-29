@@ -274,7 +274,12 @@ module.exports = {
         const owner = row.dataset.owner
         const matchSearch = text.includes(search)
         const matchStatus = status === 'all' || (status === 'pass' && isPass) || (status === 'fail' && !isPass)
-        const matchTab = currentTab === 'all' || owner === currentTab
+        let matchTab = false
+        if (currentTab === 'all') matchTab = owner === 'official'
+        else if (currentTab === 'pass') matchTab = owner === 'official' && isPass
+        else if (currentTab === 'fork') matchTab = owner === 'official' && row.dataset.forkStatus === 'pr_open'
+        else if (currentTab === 'community') matchTab = owner === 'community'
+        else matchTab = owner === currentTab
         row.classList.toggle('hidden', !matchSearch || !matchStatus || !matchTab)
       })
     }
