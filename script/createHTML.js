@@ -149,7 +149,7 @@ module.exports = {
       <h1>🔍 Seneca Repo Maintain Report</h1>
       <div style="display:flex; align-items:center; gap:16px;">
         <img src="https://www.voxgig.com/res/img/vgt01r.png" alt="Voxgig" style="height:32px; object-fit:contain;">
-        <img src="http://senecajs.org/files/assets/seneca-logo.png" alt="Seneca" style="height:32px; object-fit:contain;">
+        <img src="http://senecajs.org/files/assets/seneca-logo.png" alt="Seneca" style="height:32px; object-fit:contain; filter: brightness(0) invert(1);">
       </div>
     </div>
     <p>Generated on ${generated} · ${officialTotal} official plugins analyzed</p>
@@ -161,7 +161,7 @@ module.exports = {
     <div class="stat fail"><div class="number">${officialTotal - officialPassed}</div><div class="label">Failing</div></div>
     <div class="stat official"><div class="number">${officialPassed}/${officialTotal}</div><div class="label">Official passing</div></div>
     <div class="stat fork"><div class="number">${awaitingReview}</div><div class="label">Awaiting Review</div></div>
-    <div class="stat community"><div class="number">${communityPassed}/${communityTotal}</div><div class="label">Community passing</div></div>
+    <div class="stat community"><div class="number">${communityTotal}</div><div class="label">Community</div></div>
   </div>
 
   <div class="tab-bar">
