@@ -28,6 +28,11 @@ module.exports = {
       Object.values(p.checks).every(c => c.pass)
     ).length
 
+    const awaitingReview = plugins.filter(p =>
+      getOwner(p.data.full_name) === 'official' &&
+      p.data.fork_status === 'pr_open'
+    ).length
+
     const officialTotal = plugins.filter(p => getOwner(p.data.full_name) === 'official').length
     const forkTotal = plugins.filter(p => getOwner(p.data.full_name) === 'fork').length
     const communityTotal = plugins.filter(p => getOwner(p.data.full_name) === 'community').length
