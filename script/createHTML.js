@@ -273,7 +273,8 @@ module.exports = {
         const isPass = row.classList.contains('row-pass')
         const owner = row.dataset.owner
         const matchSearch = text.includes(search)
-        const matchStatus = status === 'all' || (status === 'pass' && isPass) || (status === 'fail' && !isPass)
+        const forkStatus = row.dataset.forkStatus
+        const matchStatus = status === 'all' || (status === 'pass' && isPass) || (status === 'fail' && !isPass) || (status === 'fork' && forkStatus === 'pr_open')
         let matchTab = false
         if (currentTab === 'all') matchTab = owner === 'official'
         else if (currentTab === 'pass') matchTab = owner === 'official' && isPass
