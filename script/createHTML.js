@@ -166,6 +166,7 @@ module.exports = {
 
   <div class="tab-bar">
     <div class="tab active" onclick="setTab('all', this)">All <span class="count">${officialTotal}</span></div>
+    <div class="tab" onclick="setTab('pass', this)">Passing <span class="count">${officialPassed}</span></div>
     <div class="tab" onclick="setTab('fork', this)">Awaiting Review <span class="count">${awaitingReview}</span></div>
     <div class="tab" onclick="setTab('community', this)">Community <span class="count">${communityTotal}</span></div>
   </div>
