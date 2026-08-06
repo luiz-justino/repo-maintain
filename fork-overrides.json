@@ -1069,5 +1069,23 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-browser-store",
+    "html_url": "https://github.com/luiz-justino/seneca-browser-store",
+    "language": "JavaScript",
+    "default_branch": "master",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-progress",
+    "html_url": "https://github.com/luiz-justino/seneca-progress",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
