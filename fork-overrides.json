@@ -1123,5 +1123,23 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-web-spider",
+    "html_url": "https://github.com/luiz-justino/seneca-web-spider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-doc-spider",
+    "html_url": "https://github.com/luiz-justino/seneca-doc-spider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
