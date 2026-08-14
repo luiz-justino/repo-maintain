@@ -1141,5 +1141,41 @@
     "forks_count": 0,
     "stargazers_count": 0,
     "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-bedrock-chat",
+    "html_url": "https://github.com/luiz-justino/seneca-bedrock-chat",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-git-spider",
+    "html_url": "https://github.com/luiz-justino/seneca-git-spider",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-gateway-fastify",
+    "html_url": "https://github.com/luiz-justino/seneca-gateway-fastify",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
+  },
+  {
+    "full_name": "luiz-justino/seneca-audit",
+    "html_url": "https://github.com/luiz-justino/seneca-audit",
+    "language": "JavaScript",
+    "default_branch": "main",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "open_issues": 0
   }
 ]
